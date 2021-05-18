@@ -3,7 +3,9 @@
 </p>
 
 # ShowsTv
-> App to search and list Tv series using the TVmaze API in Swift. You can also save your favorites shows.
+> App to search and list Tv series save your favorites shows and find people releated to them. 
+
+> The TVmaze API and the Swift program language were used to build this application.
 
 > The app uses UIKit and Storyboards to layout building.
 
@@ -37,6 +39,13 @@
 
 ## PreViews
 
+<table align="center">
+  <tr>
+  <td><a href="https://github.com/Joshoa/showstv/blob/main/media/showstv_01.gif"><img src="https://github.com/Joshoa/showstv/blob/main/media/showstv_01.gif?raw=true" style="width: 500px; max-width: 100%; height: auto" title="PreView 01" alt="PreView 01" /></a></td>
+  <td> <=> </td>
+  <td><a href="https://github.com/Joshoa/showstv/blob/main/media/showstv_02.gif"><img src="https://github.com/Joshoa/showstv/blob/main/media/showstv_02.gif?raw=true" style="width: 500px; max-width: 100%; height: auto" title="PreView 02" alt="PreView 02" /></a></td>
+  </tr>
+</table>
 
 ### Screenshots
 
