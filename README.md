@@ -25,7 +25,7 @@
     * List
     * Remove
 - [x] New tabBar to search and list people with TVmaze API
-- [ ] PIN to access app
+- [ ] PIN to access app* -> (Implemented, but not tested and therefore the method **tryAuthenticate()** is not called in the application)
 - [ ] Ensure iPad compatibility and other iPhone devices
 - [ ] Improve data persistence methods and structures
 - [ ] Improve services methods to:
