@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/Joshoa/showstv/blob/main/media/logo.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/logo.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="ShowsTv" alt="ShowsTv" /></a>
+<a href="https://github.com/Joshoa/showstv/blob/main/media/showstv_tag.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/showstv_tag.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="ShowsTv" alt="ShowsTv" /></a>
 </p>
 
 # ShowsTv
