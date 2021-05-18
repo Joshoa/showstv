@@ -477,6 +477,7 @@
                                                 <constraint firstItem="ajk-TY-eUt" firstAttribute="centerY" secondItem="ZRu-aJ-iny" secondAttribute="centerY" id="RU5-7g-X8M"/>
                                                 <constraint firstItem="ZRu-aJ-iny" firstAttribute="leading" secondItem="TOf-rW-0mc" secondAttribute="leading" constant="20" id="VWe-M5-vRi"/>
                                                 <constraint firstAttribute="trailing" secondItem="ajk-TY-eUt" secondAttribute="trailing" constant="20" id="Vl7-ul-Pl8"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZRu-aJ-iny" secondAttribute="bottom" constant="18" id="ZAe-Ki-coS"/>
                                                 <constraint firstItem="ZRu-aJ-iny" firstAttribute="top" secondItem="TOf-rW-0mc" secondAttribute="topMargin" constant="6" id="vlH-So-IGJ"/>
                                             </constraints>
                                         </view>
@@ -850,6 +851,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LPx-Y7-7qx"/>
+        <segue reference="aDR-Ng-hxX"/>
     </inferredMetricsTieBreakers>
 </document>
