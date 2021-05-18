@@ -18,7 +18,7 @@ public class TVmazeAPI {
         var url: String
         
         if let name = name, !name.isEmpty {
-            url = basePath + "/search/shows?q=\(name)"
+            url = basePath + "/search/shows?q=\(name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"
         } else {
             url = basePath + "/shows?page=\(page)"
         }
@@ -96,7 +96,7 @@ public class TVmazeAPI {
     public class func loadPeople(name: String?, onComplete: @escaping ([Person]?) -> Void) {
         
         if name != nil, !name!.isEmpty {
-            let url = basePath + "/search/people?q=\(name ?? "")"
+            let url = basePath + "/search/people?q=\(name!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")"
             
             AF.request(url).responseJSON { (response) in
                 guard let data = response.data else {
