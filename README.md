@@ -22,9 +22,11 @@
 - [x] Show Tv series episodes details
 - [x] Favorites list:
     * Add
+    * List
     * Remove
-- [ ] New tabBar to search and list people with TVmaze API
+- [x] New tabBar to search and list people with TVmaze API
 - [ ] PIN to access app
+- [ ] Ensure iPad compatibility and other iPhone devices
 - [ ] Improve data persistence methods and structures
 - [ ] Improve services methods to:
     * Catch TVmaze API requisitions error and show friendly message to users

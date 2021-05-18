@@ -19,4 +19,15 @@ class TVmazeAPIUtils {
         }
         return nil
     }
+    
+    public static func getPeopleFromSearchResponseObjectList(_ responseObjectList: [SearchPeopleResponseObject]?) -> [Person]? {
+        if let responseObjectList = responseObjectList {
+            var people: [Person] = []
+            for reponseObj in responseObjectList {
+                people.append(reponseObj.person)
+            }
+            return people
+        }
+        return nil
+    }
 }

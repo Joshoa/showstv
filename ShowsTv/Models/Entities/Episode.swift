@@ -18,7 +18,7 @@ public class Episode: Codable {
     
      private enum CodingKeys: String, CodingKey {
            case id, number, season, name, image, summary
-       }
+    }
     
     required public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)

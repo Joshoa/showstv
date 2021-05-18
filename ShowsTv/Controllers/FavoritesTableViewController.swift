@@ -10,17 +10,12 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
     
-    var label: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.textColor = UIColor(named: "orangish")!
-        return label
-    }()
+    var noInfoView: NoInfoView!
     var favoritesShowsList: [ShowCD] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Loading Favorites..."
+        configNoPlacesStackView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,14 +32,19 @@ class FavoritesTableViewController: UITableViewController {
         vc.show = Show.fromShowCD(showCD)
     }
     
+    func configNoPlacesStackView() {
+        noInfoView = NoInfoView.initializeFromNib()
+        noInfoView.config("Loading Favorites...", color: UIColor(named: "secondary")!, image: UIImage(named: "loadingSecondary")!)
+    }
+    
     func loadData() {
         if let shows: [ShowCD] = DAO.shared.list(with: context) {
             favoritesShowsList = shows
             if shows.count == 0 {
-                label.text = "Favorites list is empty!"
+                noInfoView.config("Favorites list is empty!", color: UIColor(named: "secondary")!, image: UIImage(named: "empty")!)
             }
         } else {
-            label.text = "Error on loading favorites!"
+            noInfoView.config("Error on loading favorites!", color: UIColor(named: "secondary")!, image: UIImage(named: "error")!)
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -54,7 +54,7 @@ class FavoritesTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.backgroundView = favoritesShowsList.count == 0 ? label : nil
+        tableView.backgroundView = favoritesShowsList.count == 0 ? noInfoView : nil
         return favoritesShowsList.count
     }
     

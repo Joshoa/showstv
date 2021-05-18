@@ -25,3 +25,28 @@ public struct ShowSchedule: Codable {
 public struct SearchShowResponseObject: Codable {
     let show: Show
 }
+
+public struct SearchPeopleResponseObject: Codable {
+    let person: Person
+}
+
+public struct CastcreditsResponse: Codable {
+    let links: CastcreditsResponseLink
+    
+    private enum CodingKeys: String, CodingKey {
+           case links = "_links"
+    }
+    
+}
+
+public struct CastcreditsResponseLink: Codable {
+    let show: ShowCastcreditsResponse
+}
+
+public struct ShowCastcreditsResponse: Codable {
+    let href: String
+    
+    var showId: String {
+        return href.components(separatedBy: "/shows/")[1]
+    }
+}
