@@ -26,7 +26,7 @@ class ShowsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Loading TV Shows..."
+        label.text = "Loading Tv Shows..."
         configSearchBar()
     }
     
@@ -36,6 +36,7 @@ class ShowsTableViewController: UITableViewController {
         configureNavigationBar(largeTitleColor: UIColor(named: "pinkish")!, backgoundColor: mainColorView, tintColor: mainColorView, title: "Tv Shows", preferredLargeTitle: true)
                loadShows()
         configTabBar(selectedColor: mainColorView, unselectedColor: mainColorView, viewController: self)
+        changeSearchBarInputForegroundColor(UIColor(named: "pinkish")!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -64,7 +65,7 @@ class ShowsTableViewController: UITableViewController {
     // MARK: - Methods for Fetching and Using Data
     func loadShows() {
         loadingShows = true
-        TVmazeAPI.loadShows(self.context, name: name, page: currentPage) { (shows) in
+        TVmazeAPI.loadShows(name: name, page: currentPage) { (shows) in
             if let shows = shows {
                 self.showsList = self.name.isEmpty ? self.showsList + shows : shows
                 DispatchQueue.main.async {
@@ -119,6 +120,4 @@ extension ShowsTableViewController: UISearchResultsUpdating, UISearchBarDelegate
         name = searchBar.text ?? ""
         loadShows()
     }
-    
-    
 }

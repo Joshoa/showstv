@@ -8,13 +8,13 @@
 
 import Foundation
 import Alamofire
-import CoreData
 
 public class TVmazeAPI {
     
     static private let basePath = "http://api.tvmaze.com"
+    static private let basePathHttps = "https://api.tvmaze.com"
     
-    public class func loadShows( _ context: NSManagedObjectContext,name: String?, page: Int = 0, onComplete: @escaping ([Show]?) -> Void) {
+    public class func loadShows(name: String?, page: Int = 0, onComplete: @escaping ([Show]?) -> Void) {
         var url: String
         
         if let name = name, !name.isEmpty {
@@ -86,6 +86,81 @@ public class TVmazeAPI {
             do {
                 let episodes = try JSONDecoder().decode([Episode].self, from: data)
                 onComplete(episodes)
+            } catch {
+                print(error.localizedDescription)
+                onComplete(nil)
+            }
+        }
+    }
+    
+    public class func loadPeople(name: String?, onComplete: @escaping ([Person]?) -> Void) {
+        
+        if name != nil, !name!.isEmpty {
+            let url = basePath + "/search/people?q=\(name ?? "")"
+            
+            AF.request(url).responseJSON { (response) in
+                guard let data = response.data else {
+                    onComplete(nil)
+                    return
+                }
+                do {
+                    let people = try JSONDecoder().decode([SearchPeopleResponseObject].self, from: data)
+                    onComplete(TVmazeAPIUtils.getPeopleFromSearchResponseObjectList(people))
+                } catch {
+                    print(error.localizedDescription)
+                    onComplete(nil)
+                }
+            }
+        } else {
+            onComplete(nil)
+        }
+    }
+    
+    public class func loadShowsFromCastcredits(_ personId: Int, onComplete: @escaping ([Show]?) -> Void) {
+        let url = basePath + "/people/\(personId)/castcredits"
+        
+        let dispatchGroup = DispatchGroup()
+        
+        AF.request(url).responseJSON { (response) in
+            guard let data = response.data else {
+                onComplete(nil)
+                return
+            }
+            do {
+                print(String(data: data, encoding: .utf8) ?? "Mjop")
+                var shows:[Show] = []
+                let castcredits = try JSONDecoder().decode([CastcreditsResponse].self, from: data)
+                for castcredit in castcredits {
+                    dispatchGroup.enter()
+                    let showId = castcredit.links.show.showId
+                    loadShowById(showId: showId) { (show) in
+                        if let show = show {
+                            shows.append(show)
+                            dispatchGroup.leave()
+                        }
+                    }
+                }
+                dispatchGroup.notify(queue: .main) {
+                    onComplete(shows)
+                }
+            } catch {
+                print(error.localizedDescription)
+                onComplete(nil)
+            }
+        }
+    }
+    
+    public class func loadShowById(showId: String, onComplete: @escaping (Show?) -> Void) {
+        let url = basePathHttps + "/shows/\(showId)"
+        
+        AF.request(url).responseJSON { (response) in
+            guard let data = response.data else {
+                onComplete(nil)
+                return
+            }
+            do {
+                let show = try JSONDecoder().decode(Show.self, from: data)
+                onComplete(show)
             } catch {
                 print(error.localizedDescription)
                 onComplete(nil)

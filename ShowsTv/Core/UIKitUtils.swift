@@ -40,10 +40,16 @@ extension UISearchBar {
 
 extension UITableViewCell {
     func setDisclosureArrow(size: CGFloat, color: UIColor) {
-        self.tintColor = UIColor(named: "pinkish")!
+        self.tintColor = color
         let image = UIImage(named: "disclosureArrow")?.withRenderingMode(.alwaysTemplate)
         let checkmark  = UIImageView(frame:CGRect(x:0, y:0, width: size, height: size));
         checkmark.image = image
         self.accessoryView = checkmark
+    }
+}
+
+extension UIViewController {
+    func changeSearchBarInputForegroundColor(_ color: UIColor) {
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
 }

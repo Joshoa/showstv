@@ -21,6 +21,13 @@
 		645D519F26539CCB003F6A66 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D519C26539CCB003F6A66 /* Show.swift */; };
 		645D51A026539CCB003F6A66 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D519D26539CCB003F6A66 /* Season.swift */; };
 		645D51A32653B61C003F6A66 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51A22653B61C003F6A66 /* FavoritesTableViewCell.swift */; };
+		645D51A52653D105003F6A66 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51A42653D105003F6A66 /* Person.swift */; };
+		645D51A72653D82F003F6A66 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51A62653D82F003F6A66 /* PeopleTableViewCell.swift */; };
+		645D51A92653D90A003F6A66 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51A82653D90A003F6A66 /* PeopleTableViewController.swift */; };
+		645D51AB2653E93E003F6A66 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51AA2653E93E003F6A66 /* PersonViewController.swift */; };
+		645D51AD2653FB60003F6A66 /* CastcreditsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51AC2653FB60003F6A66 /* CastcreditsTableViewCell.swift */; };
+		645D51AF26541AF6003F6A66 /* NoInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645D51AE26541AF6003F6A66 /* NoInfoView.xib */; };
+		645D51B126541B6A003F6A66 /* NoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51B026541B6A003F6A66 /* NoInfoView.swift */; };
 		64A3335326518481009FF7AF /* ShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A3335226518481009FF7AF /* ShowsTableViewCell.swift */; };
 		64B9FB26264C9ACF00D244E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9FB25264C9ACF00D244E1 /* AppDelegate.swift */; };
 		64B9FB28264C9ACF00D244E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9FB27264C9ACF00D244E1 /* SceneDelegate.swift */; };
@@ -50,6 +57,13 @@
 		645D519C26539CCB003F6A66 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		645D519D26539CCB003F6A66 /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		645D51A22653B61C003F6A66 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		645D51A42653D105003F6A66 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		645D51A62653D82F003F6A66 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		645D51A82653D90A003F6A66 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		645D51AA2653E93E003F6A66 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		645D51AC2653FB60003F6A66 /* CastcreditsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastcreditsTableViewCell.swift; sourceTree = "<group>"; };
+		645D51AE26541AF6003F6A66 /* NoInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoInfoView.xib; sourceTree = "<group>"; };
+		645D51B026541B6A003F6A66 /* NoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfoView.swift; sourceTree = "<group>"; };
 		64A3335226518481009FF7AF /* ShowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsTableViewCell.swift; sourceTree = "<group>"; };
 		64B9FB22264C9ACF00D244E1 /* ShowsTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowsTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B9FB25264C9ACF00D244E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +98,9 @@
 			children = (
 				645D519D26539CCB003F6A66 /* Season.swift */,
 				645D519C26539CCB003F6A66 /* Show.swift */,
-				645D519B26539CCB003F6A66 /* TVmazeStructs.swift */,
 				645D519926539CB4003F6A66 /* Episode.swift */,
+				645D51A42653D105003F6A66 /* Person.swift */,
+				645D519B26539CCB003F6A66 /* TVmazeStructs.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -144,6 +159,7 @@
 			children = (
 				64B9FB2B264C9ACF00D244E1 /* Main.storyboard */,
 				64B9FB30264C9AD100D244E1 /* LaunchScreen.storyboard */,
+				645D51AE26541AF6003F6A66 /* NoInfoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +172,8 @@
 				64C15C242650B0CE000D1258 /* FavoritesTableViewController.swift */,
 				6459B7442651C5F4005F4F8C /* ShowViewController.swift */,
 				64FE3B4A265336FF00E9C19B /* EpisodeViewController.swift */,
+				645D51A82653D90A003F6A66 /* PeopleTableViewController.swift */,
+				645D51AA2653E93E003F6A66 /* PersonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +204,7 @@
 				6459B74C26520FBA005F4F8C /* UIKitUtils.swift */,
 				64C15C1E2650ABD6000D1258 /* ViewControllersUtils.swift */,
 				6459B7462651F5CC005F4F8C /* TVmazeAPIUtils.swift */,
+				645D51B026541B6A003F6A66 /* NoInfoView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -196,6 +215,8 @@
 				64A3335226518481009FF7AF /* ShowsTableViewCell.swift */,
 				64FE3B472653021400E9C19B /* EpisodesTableViewCell.swift */,
 				645D51A22653B61C003F6A66 /* FavoritesTableViewCell.swift */,
+				645D51A62653D82F003F6A66 /* PeopleTableViewCell.swift */,
+				645D51AC2653FB60003F6A66 /* CastcreditsTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -269,6 +290,7 @@
 				64B9FB32264C9AD100D244E1 /* LaunchScreen.storyboard in Resources */,
 				64B9FB2F264C9AD100D244E1 /* Assets.xcassets in Resources */,
 				64B9FB2D264C9ACF00D244E1 /* Main.storyboard in Resources */,
+				645D51AF26541AF6003F6A66 /* NoInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,14 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				645D519A26539CB4003F6A66 /* Episode.swift in Sources */,
+				645D51AB2653E93E003F6A66 /* PersonViewController.swift in Sources */,
 				64C15C232650B02E000D1258 /* ShowsTableViewController.swift in Sources */,
 				645D519F26539CCB003F6A66 /* Show.swift in Sources */,
 				6452431D2653807E008453B5 /* ShowsTvData.xcdatamodeld in Sources */,
+				645D51A92653D90A003F6A66 /* PeopleTableViewController.swift in Sources */,
 				6459B7472651F5CC005F4F8C /* TVmazeAPIUtils.swift in Sources */,
 				64A3335326518481009FF7AF /* ShowsTableViewCell.swift in Sources */,
 				64FE3B4B265336FF00E9C19B /* EpisodeViewController.swift in Sources */,
 				64C15C1F2650ABD6000D1258 /* ViewControllersUtils.swift in Sources */,
 				64FE3B482653021400E9C19B /* EpisodesTableViewCell.swift in Sources */,
+				645D51A52653D105003F6A66 /* Person.swift in Sources */,
 				6459B74F265219E7005F4F8C /* Utils.swift in Sources */,
 				645D519E26539CCB003F6A66 /* TVmazeStructs.swift in Sources */,
 				645D51A32653B61C003F6A66 /* FavoritesTableViewCell.swift in Sources */,
@@ -298,9 +323,12 @@
 				64B9FB26264C9ACF00D244E1 /* AppDelegate.swift in Sources */,
 				64524317265368DD008453B5 /* DAO.swift in Sources */,
 				64B9FB28264C9ACF00D244E1 /* SceneDelegate.swift in Sources */,
+				645D51A72653D82F003F6A66 /* PeopleTableViewCell.swift in Sources */,
 				6452431F2653810E008453B5 /* CoreDataStack.swift in Sources */,
+				645D51AD2653FB60003F6A66 /* CastcreditsTableViewCell.swift in Sources */,
 				64524321265382D7008453B5 /* ViewController+CoreData.swift in Sources */,
 				64B9FB47264CA83E00D244E1 /* TVmazeAPI.swift in Sources */,
+				645D51B126541B6A003F6A66 /* NoInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
