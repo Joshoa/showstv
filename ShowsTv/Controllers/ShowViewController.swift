@@ -36,9 +36,9 @@ class ShowViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let navBarColor = UIColor(named: "darkBlue")!
+        let navBarColor = UIColor(named: "primary")!
         let navBarTextColor = UIColor(named: "pinkish")!
-        let tabBarColor = UIColor(named: "darkBlue")!
+        let tabBarColor = UIColor(named: "primary")!
         
         verifyIfShowIsFavorite()
         
