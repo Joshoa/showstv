@@ -23,6 +23,9 @@
     * Remove
 - [ ] New tabBar to search and list people with TVmaze API
 - [ ] PIN to access app
+- [ ] Improve services methods to:
+    * Catch TVmaze API requisitions error and show friendly message to users
+    * Indicate to users that the device has no internet connection
 - [ ] Unit tests
 
 
