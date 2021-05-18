@@ -40,7 +40,26 @@
 
 ### Screenshots
 
-
+<table>
+  <tr>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_01.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_01.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot01" alt="Screenshot01" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_02.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_02.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot02" alt="Screenshot02" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_03.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_03.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot03" alt="Screenshot03" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_04.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_04.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot04" alt="Screenshot04" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_05.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_05.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot05" alt="Screenshot05" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_06.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_06.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot06" alt="Screenshot06" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_07.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_07.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot07" alt="Screenshot07" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_08.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_08.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot08" alt="Screenshot08" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_09.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_09.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot09" alt="Screenshot09" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_10.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_10.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot10" alt="Screenshot10" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_11.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_11.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot11" alt="Screenshot11" /></a></td>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_12.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_12.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot12" alt="Screenshot12" /></a></td>
+  </tr>
+ </table>
 
 ## Installation
 
