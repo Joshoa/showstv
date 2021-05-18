@@ -15,6 +15,7 @@ class ShowViewController: UIViewController {
     @IBOutlet weak var genresLabel: UILabel!
     @IBOutlet weak var summaryTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var favoriteBarButtonItem: UIBarButtonItem!
     
     var show: Show!
     var seasons: [Season] = []
@@ -39,6 +40,8 @@ class ShowViewController: UIViewController {
         let navBarTextColor = UIColor(named: "pinkish")!
         let tabBarColor = UIColor(named: "darkBlue")!
         
+        verifyIfShowIsFavorite()
+        
         configureNavigationBar(largeTitleColor: navBarTextColor, backgoundColor: navBarColor, tintColor: navBarTextColor, title: "", preferredLargeTitle: false)
         configTabBar(selectedColor: tabBarColor, unselectedColor: tabBarColor, viewController: self)
     }
@@ -49,6 +52,40 @@ class ShowViewController: UIViewController {
             let season = seasons[section]
             let episode = season.episodes[row]
             vc.episode = episode
+        }
+    }
+    
+    @IBAction func toggleFavorite(_ sender: UIBarButtonItem) {
+        show.isFavorite = !show.isFavorite
+        updateFavoritesShowsList(show)
+        changeFavoriteButtonImage(show.isFavorite)
+    }
+    
+    func verifyIfShowIsFavorite() {
+        if DAO.shared.getById(id: Int32(show.id), context: self.context) != nil {
+            show.isFavorite = true
+            changeFavoriteButtonImage(show.isFavorite)
+        } else {
+            show.isFavorite = false
+            changeFavoriteButtonImage(show.isFavorite)
+        }
+    }
+    
+    func updateFavoritesShowsList(_ showToUpdate: Show) {
+        if showToUpdate.isFavorite {
+            DAO.shared.addShowToFavorites(showToUpdate, context)
+        } else {
+            DAO.shared.removeShowFromFavorites(showToUpdate, context)
+        }
+    }
+    
+    func changeFavoriteButtonImage(_ isFavorite: Bool) {
+        DispatchQueue.main.async {
+            if isFavorite {
+                self.favoriteBarButtonItem.image = UIImage(systemName: "heart.fill")
+            } else {
+                self.favoriteBarButtonItem.image = UIImage(systemName: "heart")
+            }
         }
     }
     

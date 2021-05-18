@@ -64,7 +64,7 @@ class ShowsTableViewController: UITableViewController {
     // MARK: - Methods for Fetching and Using Data
     func loadShows() {
         loadingShows = true
-        TVmazeAPI.loadShows(name: name, page: currentPage) { (shows) in
+        TVmazeAPI.loadShows(self.context, name: name, page: currentPage) { (shows) in
             if let shows = shows {
                 self.showsList = self.name.isEmpty ? self.showsList + shows : shows
                 DispatchQueue.main.async {

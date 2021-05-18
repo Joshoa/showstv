@@ -297,8 +297,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zxf-fy-Ks8"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UPj-LF-kKB"/>
+                    <navigationItem key="navigationItem" id="UPj-LF-kKB">
+                        <barButtonItem key="rightBarButtonItem" title="Favorite" image="heart.fill" catalog="system" id="yKZ-di-4Wp">
+                            <connections>
+                                <action selector="toggleFavorite:" destination="AOj-pv-8tR" id="0C0-ds-dNa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="favoriteBarButtonItem" destination="yKZ-di-4Wp" id="94X-vv-EKb"/>
                         <outlet property="genresLabel" destination="LFg-tq-COR" id="2k5-Oh-DYY"/>
                         <outlet property="imageShow" destination="Zis-9a-sWX" id="Gaq-lp-dr9"/>
                         <outlet property="scheduleLabel" destination="Bf0-JM-Asq" id="yWe-7n-6gY"/>
@@ -434,28 +441,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="fFQ-P9-Igx">
-                            <rect key="frame" x="0.0" y="99.5" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="168" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favShowCell" textLabel="4d0-dS-uMk" style="IBUITableViewCellStyleDefault" id="HuY-3h-Wqp">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="favShowCell" rowHeight="112" id="HuY-3h-Wqp" customClass="FavoritesTableViewCell" customModule="ShowsTv" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HuY-3h-Wqp" id="jg0-DZ-IsO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4d0-dS-uMk">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-rW-0mc">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="112"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZRu-aJ-iny">
+                                                    <rect key="frame" x="20" y="14" width="56" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="56" id="e4y-sQ-umI"/>
+                                                        <constraint firstAttribute="height" constant="80" id="em4-R5-gFb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-TY-eUt">
+                                                    <rect key="frame" x="88" y="16" width="275" height="76"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" name="orangish"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="ajk-TY-eUt" firstAttribute="leading" secondItem="ZRu-aJ-iny" secondAttribute="trailing" constant="12" id="208-in-3ZK"/>
+                                                <constraint firstAttribute="bottom" secondItem="ajk-TY-eUt" secondAttribute="bottom" constant="20" id="Foy-rS-Zl6"/>
+                                                <constraint firstItem="ajk-TY-eUt" firstAttribute="centerY" secondItem="ZRu-aJ-iny" secondAttribute="centerY" id="RU5-7g-X8M"/>
+                                                <constraint firstItem="ZRu-aJ-iny" firstAttribute="leading" secondItem="TOf-rW-0mc" secondAttribute="leading" constant="20" id="VWe-M5-vRi"/>
+                                                <constraint firstAttribute="trailing" secondItem="ajk-TY-eUt" secondAttribute="trailing" constant="20" id="Vl7-ul-Pl8"/>
+                                                <constraint firstItem="ZRu-aJ-iny" firstAttribute="top" secondItem="TOf-rW-0mc" secondAttribute="topMargin" constant="6" id="vlH-So-IGJ"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TOf-rW-0mc" secondAttribute="bottom" id="TbA-kk-wnG"/>
+                                        <constraint firstItem="TOf-rW-0mc" firstAttribute="leading" secondItem="jg0-DZ-IsO" secondAttribute="leading" id="UiD-2j-FA1"/>
+                                        <constraint firstItem="TOf-rW-0mc" firstAttribute="top" secondItem="jg0-DZ-IsO" secondAttribute="top" id="gAo-pC-VsG"/>
+                                        <constraint firstAttribute="trailing" secondItem="TOf-rW-0mc" secondAttribute="trailing" id="s5m-5D-cne"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageShow" destination="ZRu-aJ-iny" id="0Tl-QU-Cqx"/>
+                                    <outlet property="titleLabel" destination="ajk-TY-eUt" id="x1f-68-hPK"/>
                                     <segue destination="AOj-pv-8tR" kind="show" identifier="favoritesToShowSegue" id="aDR-Ng-hxX"/>
                                 </connections>
                             </tableViewCell>
@@ -469,7 +504,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxh-kA-siY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3172" y="129"/>
+            <point key="canvasLocation" x="3171.0144927536235" y="128.57142857142856"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Hr0-Tc-A2u">
@@ -544,6 +579,9 @@
         <namedColor name="darkBlue">
             <color red="0.12941176470588237" green="0.0078431372549019607" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="orangish">
+            <color red="0.93725490196078431" green="0.41960784313725491" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="pinkish">
             <color red="0.94901960784313721" green="0.14901960784313725" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -552,6 +590,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I1O-0U-xYL"/>
+        <segue reference="aDR-Ng-hxX"/>
     </inferredMetricsTieBreakers>
 </document>

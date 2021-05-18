@@ -1,16 +1,15 @@
 //
-//  ShowsTableViewCell.swift
+//  FavoritesTableViewCell.swift
 //  ShowsTv
 //
-//  Created by Marcos Joshoa on 16/05/21.
+//  Created by Marcos Joshoa on 18/05/21.
 //  Copyright © 2021 Marcos Joshoa. All rights reserved.
 //
 
 import UIKit
-import Kingfisher
 
-class ShowsTableViewCell: UITableViewCell {
-    
+class FavoritesTableViewCell: UITableViewCell {
+
     @IBOutlet weak var imageShow: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,7 +25,7 @@ class ShowsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func prepareCell(with show: Show, color: UIColor = UIColor(named: "pinkish")!) {
+    func prepareCell(with show: Show, color: UIColor = UIColor(named: "orangish")!) {
         titleLabel.text = show.name
         if let imageUrl = show.image?.medium, let url = URL(string: imageUrl) {
             imageShow.kf.indicatorType = .activity
@@ -37,8 +36,7 @@ class ShowsTableViewCell: UITableViewCell {
         
         imageShow.layer.cornerRadius = 2.0
         imageShow.layer.borderColor = color.cgColor
-        imageShow.layer.borderWidth = 2
-        
+        imageShow.layer.borderWidth = 2   
     }
 
 }

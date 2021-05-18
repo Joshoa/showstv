@@ -8,12 +8,13 @@
 
 import Foundation
 import Alamofire
+import CoreData
 
 public class TVmazeAPI {
     
     static private let basePath = "http://api.tvmaze.com"
     
-    public class func loadShows(name: String?, page: Int = 0, onComplete: @escaping ([Show]?) -> Void) {
+    public class func loadShows( _ context: NSManagedObjectContext,name: String?, page: Int = 0, onComplete: @escaping ([Show]?) -> Void) {
         var url: String
         
         if let name = name, !name.isEmpty {
@@ -83,7 +84,6 @@ public class TVmazeAPI {
                 return
             }
             do {
-                print(String(data: data, encoding: .utf8) ?? "Mjop")
                 let episodes = try JSONDecoder().decode([Episode].self, from: data)
                 onComplete(episodes)
             } catch {
