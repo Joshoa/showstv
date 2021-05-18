@@ -722,16 +722,23 @@
                                                         <rect key="frame" x="0.0" y="55.5" width="398" height="341.5"/>
                                                         <subviews>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yib-ou-6qi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="341.5"/>
+                                                                <rect key="frame" x="0.0" y="8" width="398" height="333.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tv Shows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aY2-JL-Nlv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="44"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <view key="tableFooterView" contentMode="scaleToFill" id="0n3-N5-mDS">
-                                                                    <rect key="frame" x="0.0" y="168" width="398" height="0.0"/>
+                                                                    <rect key="frame" x="0.0" y="212" width="398" height="0.0"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 </view>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="castcreditsCell" rowHeight="112" id="P7D-dJ-R5K" customClass="CastcreditsTableViewCell" customModule="ShowsTv" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="28" width="398" height="112"/>
+                                                                        <rect key="frame" x="0.0" y="72" width="398" height="112"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7D-dJ-R5K" id="LdF-Dc-v7R">
                                                                             <rect key="frame" x="0.0" y="0.0" width="367" height="112"/>
@@ -779,7 +786,7 @@
                                                             <constraint firstItem="Yib-ou-6qi" firstAttribute="leading" secondItem="YIw-DH-D3i" secondAttribute="leading" id="4aq-TT-1Xa"/>
                                                             <constraint firstAttribute="bottom" secondItem="Yib-ou-6qi" secondAttribute="bottom" id="89V-sx-TEz"/>
                                                             <constraint firstAttribute="trailing" secondItem="Yib-ou-6qi" secondAttribute="trailing" id="hJL-Mu-Xod"/>
-                                                            <constraint firstItem="Yib-ou-6qi" firstAttribute="top" secondItem="YIw-DH-D3i" secondAttribute="top" id="y6z-y0-7Pa"/>
+                                                            <constraint firstItem="Yib-ou-6qi" firstAttribute="top" secondItem="YIw-DH-D3i" secondAttribute="top" constant="8" id="y6z-y0-7Pa"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -843,6 +850,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I1O-0U-xYL"/>
+        <segue reference="LPx-Y7-7qx"/>
     </inferredMetricsTieBreakers>
 </document>
