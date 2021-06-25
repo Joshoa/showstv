@@ -29,6 +29,8 @@
 		645D51AF26541AF6003F6A66 /* NoInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 645D51AE26541AF6003F6A66 /* NoInfoView.xib */; };
 		645D51B126541B6A003F6A66 /* NoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D51B026541B6A003F6A66 /* NoInfoView.swift */; };
 		64A3335326518481009FF7AF /* ShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A3335226518481009FF7AF /* ShowsTableViewCell.swift */; };
+		64B5DEDE26861FA80002AF30 /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5DEDD26861FA80002AF30 /* AppReviewManager.swift */; };
+		64B5DEE4268628DD0002AF30 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5DEE3268628DD0002AF30 /* UserDefaultsKeys.swift */; };
 		64B9FB26264C9ACF00D244E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9FB25264C9ACF00D244E1 /* AppDelegate.swift */; };
 		64B9FB28264C9ACF00D244E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9FB27264C9ACF00D244E1 /* SceneDelegate.swift */; };
 		64B9FB2D264C9ACF00D244E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B9FB2B264C9ACF00D244E1 /* Main.storyboard */; };
@@ -65,6 +67,8 @@
 		645D51AE26541AF6003F6A66 /* NoInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoInfoView.xib; sourceTree = "<group>"; };
 		645D51B026541B6A003F6A66 /* NoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfoView.swift; sourceTree = "<group>"; };
 		64A3335226518481009FF7AF /* ShowsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsTableViewCell.swift; sourceTree = "<group>"; };
+		64B5DEDD26861FA80002AF30 /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
+		64B5DEE3268628DD0002AF30 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		64B9FB22264C9ACF00D244E1 /* ShowsTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowsTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B9FB25264C9ACF00D244E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B9FB27264C9ACF00D244E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				645D519926539CB4003F6A66 /* Episode.swift */,
 				645D51A42653D105003F6A66 /* Person.swift */,
 				645D519B26539CCB003F6A66 /* TVmazeStructs.swift */,
+				64B5DEE3268628DD0002AF30 /* UserDefaultsKeys.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -111,6 +116,33 @@
 				64524316265368DD008453B5 /* DAO.swift */,
 			);
 			path = DAOs;
+			sourceTree = "<group>";
+		};
+		64B5DEDA26861CEB0002AF30 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6459B74E265219E7005F4F8C /* Utils.swift */,
+				6459B74C26520FBA005F4F8C /* UIKitUtils.swift */,
+				64C15C1E2650ABD6000D1258 /* ViewControllersUtils.swift */,
+				6459B7462651F5CC005F4F8C /* TVmazeAPIUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		64B5DEDB26861CFB0002AF30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				645D51B026541B6A003F6A66 /* NoInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		64B5DEDC26861D080002AF30 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				64B5DEDD26861FA80002AF30 /* AppReviewManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		64B9FB19264C9ACF00D244E1 = {
@@ -200,11 +232,9 @@
 		64C15C1D2650ABA2000D1258 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6459B74E265219E7005F4F8C /* Utils.swift */,
-				6459B74C26520FBA005F4F8C /* UIKitUtils.swift */,
-				64C15C1E2650ABD6000D1258 /* ViewControllersUtils.swift */,
-				6459B7462651F5CC005F4F8C /* TVmazeAPIUtils.swift */,
-				645D51B026541B6A003F6A66 /* NoInfoView.swift */,
+				64B5DEDC26861D080002AF30 /* Managers */,
+				64B5DEDA26861CEB0002AF30 /* Utils */,
+				64B5DEDB26861CFB0002AF30 /* Views */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -315,6 +345,7 @@
 				645D51A52653D105003F6A66 /* Person.swift in Sources */,
 				6459B74F265219E7005F4F8C /* Utils.swift in Sources */,
 				645D519E26539CCB003F6A66 /* TVmazeStructs.swift in Sources */,
+				64B5DEDE26861FA80002AF30 /* AppReviewManager.swift in Sources */,
 				645D51A32653B61C003F6A66 /* FavoritesTableViewCell.swift in Sources */,
 				64C15C252650B0CE000D1258 /* FavoritesTableViewController.swift in Sources */,
 				6459B74D26520FBA005F4F8C /* UIKitUtils.swift in Sources */,
@@ -322,6 +353,7 @@
 				6459B7452651C5F4005F4F8C /* ShowViewController.swift in Sources */,
 				64B9FB26264C9ACF00D244E1 /* AppDelegate.swift in Sources */,
 				64524317265368DD008453B5 /* DAO.swift in Sources */,
+				64B5DEE4268628DD0002AF30 /* UserDefaultsKeys.swift in Sources */,
 				64B9FB28264C9ACF00D244E1 /* SceneDelegate.swift in Sources */,
 				645D51A72653D82F003F6A66 /* PeopleTableViewCell.swift in Sources */,
 				6452431F2653810E008453B5 /* CoreDataStack.swift in Sources */,

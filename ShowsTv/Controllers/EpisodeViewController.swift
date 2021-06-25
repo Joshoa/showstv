@@ -17,6 +17,7 @@ class EpisodeViewController: UIViewController {
     
     
     var episode: Episode!
+    let appReviewManager = AppReviewManager.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class EpisodeViewController: UIViewController {
         
         configureNavigationBar(largeTitleColor: navBarTextColor, backgoundColor: navBarColor, tintColor: navBarTextColor, title: "Episode \(episode.number)", preferredLargeTitle: false)
         configTabBar(selectedColor: tabBarColor, unselectedColor: tabBarColor, viewController: self)
+        appReviewManager.askForReview(asPopup: true)
     }
     
     func loadEpisodeView() {

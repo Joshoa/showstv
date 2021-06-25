@@ -27,6 +27,10 @@
     * List
     * Remove
 - [x] New tabBar to search and list people with TVmaze API
+- [x] App Rating and Review:
+    -[x] Present the Review Request as Popup
+    -[ ] Interact with user to open review on App Store
+    -[ ] Improve the method that tells whether or not to ask the user to rate the app
 - [ ] PIN to access app* -> (Implemented, but not tested and therefore the method **tryAuthenticate()** is not called in the application)
 - [ ] Ensure iPad compatibility and other iPhone devices
 - [ ] Improve data persistence methods and structures

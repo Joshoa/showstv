@@ -52,6 +52,7 @@ class ShowViewController: UIViewController {
             let season = seasons[section]
             let episode = season.episodes[row]
             vc.episode = episode
+            AppReviewManager.standard.increaseScore()
         }
     }
     

@@ -42,6 +42,7 @@ class ShowsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ShowViewController
         vc.show = showsList[tableView.indexPathForSelectedRow!.row]
+        AppReviewManager.standard.increaseScore()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
