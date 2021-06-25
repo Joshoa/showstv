@@ -72,6 +72,9 @@
     <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_11.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_11.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot11" alt="Screenshot11" /></a></td>
     <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_12.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_12.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot12" alt="Screenshot12" /></a></td>
   </tr>
+<tr>
+    <td><a href="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_13.png"><img src="https://github.com/Joshoa/showstv/blob/main/media/ScreenShot_13.png?raw=true" style="width: 500px; max-width: 100%; height: auto" title="Screenshot13" alt="Screenshot13" /></a></td>
+  </tr>
  </table>
 
 ## Installation
