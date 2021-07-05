@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    // MARK: - Properties
+    let crashManager = CrashManager.shared
+    let appReviewManager = AppReviewManager.standard
+    let screenTimeManager = ScreenTimeManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "pinkish")!]
+        FirebaseApp.configure()
+        crashLyticsCheckForUnsentReports()
+        appReviewManager.increaseAmountOfTimesAppWasOpen()
+        screenTimeManager.resetScreenTimes()
         
         return true
+    }
+    
+    func crashLyticsCheckForUnsentReports() {
+        if Crashlytics.crashlytics().didCrashDuringPreviousExecution() {
+            crashManager.increaseNumberOfCrashes()
+        }
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

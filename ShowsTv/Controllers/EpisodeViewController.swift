@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController {
+class EpisodeViewController: BaseViewController {
     
     @IBOutlet weak var imageEpisode: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

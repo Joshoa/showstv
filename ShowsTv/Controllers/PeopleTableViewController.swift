@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeopleTableViewController: UITableViewController {
+class PeopleTableViewController: BaseTableViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
     var noInfoView: NoInfoView!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowViewController: UIViewController {
+class ShowViewController: BaseViewController {
     @IBOutlet weak var imageShow: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
@@ -60,6 +60,7 @@ class ShowViewController: UIViewController {
         show.isFavorite = !show.isFavorite
         updateFavoritesShowsList(show)
         changeFavoriteButtonImage(show.isFavorite)
+        fatalError()
     }
     
     func verifyIfShowIsFavorite() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowsTableViewController: UITableViewController {
+class ShowsTableViewController: BaseTableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     

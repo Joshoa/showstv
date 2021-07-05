@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonViewController: UIViewController {
+class PersonViewController: BaseViewController {
 
     @IBOutlet weak var imagePerson: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
